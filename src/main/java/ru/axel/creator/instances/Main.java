@@ -1,15 +1,7 @@
 package ru.axel.creator.instances;
 
-import java.lang.reflect.InvocationTargetException;
-
 public class Main {
-    public static void main(String[] args) throws InvocationTargetException, InstantiationException, IllegalAccessException {
-        CreatorInstances.createInstance(Test.class);
-    }
-}
+    public static void main(String[] args) {
 
-class Test {
-    public Test() {
-        System.out.println("Test created");
     }
 }

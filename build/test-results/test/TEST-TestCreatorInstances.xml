@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestCreatorInstances" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-09-30T16:44:44" hostname="MacBook-Air-Pavel.local" time="0.05">
+  <properties/>
+  <testcase name="tester()" classname="TestCreatorInstances" time="0.05"/>
+  <system-out><![CDATA[TesterClass created without parameters
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

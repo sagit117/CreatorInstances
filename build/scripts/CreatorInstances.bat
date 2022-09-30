@@ -67,7 +67,7 @@ goto fail
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\CreatorInstances-1.0.0.jar;%APP_HOME%\lib\annotations-23.0.0.jar
+set CLASSPATH=%APP_HOME%\lib\CreatorInstances-1.0.1.jar;%APP_HOME%\lib\annotations-23.0.0.jar
 
 
 @rem Execute CreatorInstances

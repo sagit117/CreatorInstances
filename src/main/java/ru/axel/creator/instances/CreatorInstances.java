@@ -13,25 +13,17 @@ public final class CreatorInstances {
      * @return инстанс класса
      */
     @SuppressWarnings("unchecked")
-    public static @NotNull <T> T createInstance(@NotNull Class<?> clazz) {
+    public static @NotNull <T> T createInstance(@NotNull Class<?> clazz) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         Constructor<T>[] constructors = (Constructor<T>[]) clazz.getDeclaredConstructors();
-        var first= Arrays.stream(constructors).findFirst();
+        var first= Arrays.stream(constructors).findFirst().orElseThrow();
 
-        try {
-            return first.orElseThrow().newInstance();
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
-        }
+        return first.newInstance();
     }
     @SuppressWarnings("unchecked")
-    public static @NotNull <T> T createInstance(@NotNull Class<?> clazz, Object... args) {
+    public static @NotNull <T> T createInstance(@NotNull Class<?> clazz, Object... args) throws InvocationTargetException, InstantiationException, IllegalAccessException {
         Constructor<T>[] constructors = (Constructor<T>[]) clazz.getDeclaredConstructors();
-        var first= Arrays.stream(constructors).findFirst();
+        var first= Arrays.stream(constructors).findFirst().orElseThrow();
 
-        try {
-            return first.orElseThrow().newInstance(args);
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
-            throw new RuntimeException(e);
-        }
+        return first.newInstance(args);
     }
 }
